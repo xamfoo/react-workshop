@@ -1,0 +1,25 @@
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  text-transform: none;
+}
+
+.reveal code {
+  font-family: 'Iosevka Fixed Web'
+}
+
+.reveal strong {
+  color: var(--r-heading-color);
+}
+
+.example1_container {
+  align-items: center;
+  background: #000;
+  border: 1px solid #FFF;
+  display: flex;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.example1_avatar {
+  border-radius: 50%;
+  width: 65px;
+}

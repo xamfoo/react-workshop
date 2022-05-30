@@ -1,0 +1,24 @@
+{
+  "name": "react-workshop",
+  "version": "1.0.0",
+  "description": "Materials for a React workshop",
+  "main": "index.js",
+  "scripts": {
+    "start": "reveal-md slides.md --watch --disable-auto-open --theme moon --highlight-theme github-dark --css fonts/iosevka-fixed.css,style.css",
+    "build": "reveal-md slides.md --static public --theme moon --highlight-theme github-dark --css --css fonts/iosevka-fixed.css,style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xamfoo/react-workshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xamfoo/react-workshop/issues"
+  },
+  "homepage": "https://github.com/xamfoo/react-workshop#readme",
+  "dependencies": {
+    "reveal-md": "^5.3.3"
+  }
+}
