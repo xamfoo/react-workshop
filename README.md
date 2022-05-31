@@ -2,6 +2,10 @@
 
 Materials for a React workshop
 
+## [Content](slides.md)
+
+## [Presentation](https://xamfoo.github.io/react-workshop)
+
 ## Development
 
 - Install dependencies

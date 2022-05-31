@@ -2,7 +2,10 @@
 
 Max Foo
 
-Note: Should give you a good foundation to learn about HTML, CSS, JS and React
+https://xamfoo.github.io/react-workshop
+
+Note:
+- Should give you a good foundation to learn about HTML, CSS, JS and React
 
 ---
 
