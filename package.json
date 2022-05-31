@@ -7,7 +7,7 @@
   "scripts": {
     "start": "reveal-md slides.md --watch --disable-auto-open --theme moon --highlight-theme github-dark --css fonts/iosevka-fixed.css,style.css",
     "clean": "rimraf docs",
-    "build": "cross-env npm run clean && reveal-md slides.md --static docs --theme moon --highlight-theme github-dark --css fonts/iosevka-fixed.css,style.css && npx cpy-cli . '../docs' --cwd=fonts && npx cpy-cli img docs"
+    "build": "cross-env npm run clean && reveal-md slides.md --static docs --theme moon --highlight-theme github-dark --css fonts/iosevka-fixed.css,style.css && npx cpy-cli fonts docs/_assets && npx cpy-cli img docs"
   },
   "repository": {
     "type": "git",
