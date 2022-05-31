@@ -65,7 +65,7 @@ Example HTML
 <div class="example1_container">
   <img
     class="example1_avatar"
-    src="img/pikachu.png"
+    src="assets/img/pikachu.png"
   />
   <span>Pikachu</span>
 </div>
@@ -96,7 +96,7 @@ Example CSS
 <div class="example1_container">
   <img
     class="example1_avatar"
-    src="img/pikachu.png"
+    src="assets/img/pikachu.png"
   />
   <span>Pikachu</span>
 </div>

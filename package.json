@@ -5,9 +5,9 @@
   "description": "Materials for a React workshop",
   "main": "index.js",
   "scripts": {
-    "start": "reveal-md slides.md --watch --disable-auto-open --theme moon --highlight-theme github-dark --css fonts/iosevka-fixed.css,style.css",
+    "start": "reveal-md slides.md --watch --disable-auto-open --theme moon --highlight-theme github-dark --css assets/fonts/iosevka-fixed.css,assets/style.css",
     "clean": "rimraf docs",
-    "build": "cross-env npm run clean && reveal-md slides.md --static docs --theme moon --highlight-theme github-dark --css fonts/iosevka-fixed.css,style.css && npx cpy-cli fonts docs/_assets && npx cpy-cli img docs"
+    "build": "cross-env npm run clean && reveal-md slides.md --static docs --static-dirs assets --assets-dir '.' --absolute-url https://xamfoo.github.io/react-workshop --title 'React 18 for Beginners' --theme moon --highlight-theme github-dark --css assets/fonts/iosevka-fixed.css,assets/style.css"
   },
   "repository": {
     "type": "git",
@@ -21,11 +21,9 @@
   },
   "homepage": "https://github.com/xamfoo/react-workshop#readme",
   "devDependencies": {
-    "cpy-cli": "^4.1.0",
     "cross-env": "^7.0.3",
+    "puppeteer-core": "^14.1.2",
     "reveal-md": "5.3.3",
     "rimraf": "^3.0.2"
-  },
-  "dependencies": {
   }
 }
