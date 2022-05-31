@@ -7,7 +7,7 @@
   "scripts": {
     "start": "reveal-md slides.md --watch --disable-auto-open --theme moon --highlight-theme github-dark --css fonts/iosevka-fixed.css,style.css",
     "clean": "rimraf docs",
-    "build": "cross-env npm run clean && reveal-md slides.md --static docs --theme moon --highlight-theme github-dark --css fonts/iosevka-fixed.css,style.css"
+    "build": "cross-env npm run clean && reveal-md slides.md --static docs --theme moon --highlight-theme github-dark --css fonts/iosevka-fixed.css,style.css && npx cpy-cli . '../docs' --cwd=fonts && npx cpy-cli img docs"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,11 @@
   },
   "homepage": "https://github.com/xamfoo/react-workshop#readme",
   "devDependencies": {
+    "cpy-cli": "^4.1.0",
     "cross-env": "^7.0.3",
     "reveal-md": "5.3.3",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
   }
 }
