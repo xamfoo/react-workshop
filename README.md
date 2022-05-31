@@ -1,4 +1,4 @@
-# React v18 for Beginners
+# React 18 for Beginners
 
 Materials for a React workshop
 
@@ -10,5 +10,9 @@ $ npm ci
 ```
 - Run presentation
 ```shell
-npm start
+$ npm start
+```
+- Build presentation
+```shell
+$ npm run build
 ```

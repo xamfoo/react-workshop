@@ -1,11 +1,28 @@
-# React 18 for Beginners
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/moon.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/github-dark.css" />
+
+    <link rel="stylesheet" href="./_assets/fonts/iosevka-fixed.css" />
+    <link rel="stylesheet" href="./_assets/style.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"># React 18 for Beginners
 
 Max Foo
 
-Note: Should give you a good foundation to learn about HTML, CSS, JS and React
-
----
-
+<aside class="notes"><p>Should give you a good foundation to learn about HTML, CSS, JS and React</p>
+</aside></script></section><section ><section data-markdown><script type="text/template">
 ## Introduction to React
 
 - What is React?
@@ -18,19 +35,16 @@ Note: Should give you a good foundation to learn about HTML, CSS, JS and React
 - Toolchain
 - Editors for JS
 - Exercise 1 - Create a React project
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### What is React?
 
 - A JavaScript library for building user interfaces
 - Initial release by Facebook in 2015
 
-Note:
-- What do you already know about React?
-
-----
-
+<aside class="notes"><ul>
+<li>What do you already know about React?</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">
 #### What is React? - HyperText Markup Language (HTML)
 
 **The source code of a Web page**
@@ -50,11 +64,10 @@ Note:
 - Specify presentation with CSS <!-- .element class="fragment" -->
 - React is a way to create HTML <!-- .element class="fragment" -->
 
-Note:
-- Why do you think HTML looks like this?
-
-----
-
+<aside class="notes"><ul>
+<li>Why do you think HTML looks like this?</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">
 #### What is React? - Cascading Style Sheets (CSS)
 
 <div style="display: flex; font-size: 0.8em">
@@ -102,11 +115,10 @@ Example CSS
 </div>
 </div>
 
-Note:
-- What do you already know about CSS?
-
-----
-
+<aside class="notes"><ul>
+<li>What do you already know about CSS?</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">
 #### What is React? - JavaScript (JS)
 
 **Scripting language used by browsers**
@@ -127,11 +139,10 @@ const names = extract(people, 'name');
 - Node.js APIs: <!-- .element class="fragment" --> `require` etc.
 - React exposes JS APIs <!-- .element class="fragment" -->
 
-Note:
-- It is now a good time to have a quick revision on JS
-
-----
-
+<aside class="notes"><ul>
+<li>It is now a good time to have a quick revision on JS</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">
 #### What is React? - Document Object Model (DOM)
 
 In-memory object of a document
@@ -145,10 +156,8 @@ document.body.appendChild(document.createTextNode('Example text'));
   class="fragment" -->
 - 90% YAGNI when using React <!-- .element class="fragment" -->
 
-Note: See React Fiber Architecture about rendering and the reconcilation process
-
-----
-
+<aside class="notes"><p>See React Fiber Architecture about rendering and the reconcilation process</p>
+</aside></script></section><section data-markdown><script type="text/template">
 ### Why use React?
 
 <div class="fragment">
@@ -170,10 +179,8 @@ Cons
   class="fragment" -->
 </div>
 
-Note: Declarative (what needs to be done, instead of how it should be done)
-
-----
-
+<aside class="notes"><p>Declarative (what needs to be done, instead of how it should be done)</p>
+</aside></script></section><section data-markdown><script type="text/template">
 ### Usage
 
 <div class="fragment">
@@ -190,8 +197,8 @@ $ npm install react react-dom
 or add React to an existing HTML page
 
 ```html
-<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin>__SCRIPT_END__
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin>__SCRIPT_END__
 ```
 </div>
 
@@ -204,27 +211,21 @@ or try it in an online editor
 - replit.com - React template
   https://replit.com/@replit/Reactjs
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Toolchain
 
 - A <!-- .element class="fragment" --> **package manager** for using published packages including React e.g. npm, pnpm, Yarn
 - A <!-- .element class="fragment" --> **bundler** lets you write modular code and bundles it for optimal load time e.g. Parcel, Rollup, webpack
 - A <!-- .element class="fragment" --> **compiler** lets you use the latest language features which still works in older browsers e.g. Babel, Typescript
 - (<!-- .element class="fragment" -->*Optional*) An opinionated **template** for creating a new React App e.g. Create React App, Vite
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Editors for JS
 
 - **VS Code** is recommended for beginners with no background
 - **Intellij** or **WebStorm** when you want an IDE
 - Try **Vim** or **Emacs** at your own time when you want maximum
   configurability and don't mind a steep learning curve
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Exercise 1 - Create a React project
 
 <div style="font-size: 0.7em">
@@ -251,18 +252,14 @@ $ npm start
 6. (Optional) Download and install a code editor
 
 </div>
-
----
-
+</script></section></section><section ><section data-markdown><script type="text/template">
 ## Elements and JSX
 
 - What are React Elements?
 - Rendering Elements
 - What is JSX?
 - Why JSX?
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### What are React Elements?
 
 Smallest building blocks of React apps
@@ -278,9 +275,7 @@ const element = React.createElement(
 - Immutable objects <!-- .element class="fragment" -->
 - Cheap to create <!-- .element class="fragment" -->
 - Snapshot of a component <!-- .element class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Rendering Elements
 
 <div style="font-size: 0.8em">
@@ -311,9 +306,7 @@ root.render(React.createElement('h2', null, 'Gallium'));
 ```
 </div>
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### What is JSX?
 
 <div class="fragment">
@@ -341,17 +334,13 @@ const element = (
 );
 ```
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Why JSX?
 
 - React allows creation of components are units where markup and logic are
   defined together
 - Most people find it helpful as a visual aid when working with UI inside JS
-
----
-
+</script></section></section><section ><section data-markdown><script type="text/template">
 ## Components and Props
 
 - Function Components
@@ -361,9 +350,7 @@ const element = (
 - Styling Components
 - JS Modules and Components
 - Exercise 2 - Creating Components
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Function Components
 
 <div style="font-size: 0.7em">
@@ -385,9 +372,7 @@ const Welcome = props => <h1>Hello, {props.name}</h1>;
 - Only <!-- .element class="fragment" --> function components support **hooks**
 
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Class Components
 
 <div style="font-size: 0.7em">
@@ -412,9 +397,7 @@ class Welcome extends React.Component {
   lifecycle methods of a class component
 
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Rendering Components
 
 <div style="font-size: 0.8em">
@@ -437,9 +420,7 @@ root.render(<React.StrictMode>{element}</React.StrictMode>);
     which are supposed to be idempotent
 
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Composing Components
 
 A components can refer to other components
@@ -457,9 +438,7 @@ function App() {
 
 - <!-- .element class="fragment" -->
   A React app is composed of multiple components
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Styling Components
 
 Add CSS classes to components by passing the **`className`** prop
@@ -478,9 +457,7 @@ Then target them with CSS class selectors
 .menu { /*...*/ }
 .navigation { /*...*/ }
 ```
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### JS Modules and Components
 
 <div style="font-size: 0.8em">
@@ -510,9 +487,7 @@ import './App.css'; // import CSS file works only if supported by bundler
 Ensure **`React`** is imported when using JSX in the file
 
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Exercise 2 - Creating Components
 
 <div style="font-size: 0.7em">
@@ -534,18 +509,14 @@ $ npm start
    - Use browser dev tools to view the source and styles of the page
 
 </div>
-
----
-
+</script></section></section><section ><section data-markdown><script type="text/template">
 ## Lists and Fragments
 
 - Lists
 - Keys
 - Fragments
 - Keyed Fragments
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Lists
 
 ```javascript
@@ -578,10 +549,8 @@ Warning: Each child in a list should have a unique 'key' prop.
 
 </div>
 
-Note: Why does the warning exist?
-
-----
-
+<aside class="notes"><p>Why does the warning exist?</p>
+</aside></script></section><section data-markdown><script type="text/template">
 ### Keys
 
 Add keys to help identify addition or removal of an item
@@ -610,10 +579,8 @@ const Users = (props) => (
 
 - Keys need only be unique among siblings <!-- .element class="fragment" -->
 
-Note: Why is using a stable key better than an array index?
-
-----
-
+<aside class="notes"><p>Why is using a stable key better than an array index?</p>
+</aside></script></section><section data-markdown><script type="text/template">
 ### Fragments
 
 Returning multiple elements without keys or nesting
@@ -635,9 +602,7 @@ const Player = (props) => (
 
 - Useful to present disparate groups of information as one <!-- .element
   class="fragment" -->
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Keyed Fragments
 
 \<\> is the shorthand for \<React.Fragment\>
@@ -657,9 +622,7 @@ const Glossary = (props) => (
 
 - Only <!-- .element class="fragment" --> **\<React.Fragment\>** supports the
   key attribute
-
----
-
+</script></section></section><section ><section data-markdown><script type="text/template">
 ## State and Effect
 
 - Introduction to Hooks
@@ -670,9 +633,7 @@ const Glossary = (props) => (
 - Rule of Hooks
 - Data Fetching
 - Exercise 3 - Rendering Data
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Introduction to Hooks
 
 - <!-- .element class="fragment" -->
@@ -682,9 +643,7 @@ const Glossary = (props) => (
   Hooks only works in function components
 - <!-- .element class="fragment" -->
   Hooks stores data for the **lifetime** of a component
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Introduction to Hooks - Component Lifetime
 
 <div style="font-size: 0.7em">
@@ -710,10 +669,8 @@ root.render(<div><App name="Tyke" key="1" /></div>); // Key change: 3rd life end
 
 </div>
 
-Note: How does React decide when to mount or unmount a component?
-
-----
-
+<aside class="notes"><p>How does React decide when to mount or unmount a component?</p>
+</aside></script></section><section data-markdown><script type="text/template">
 ### State Hook
 
 <div style="font-size: 0.7em">
@@ -746,9 +703,7 @@ testSetCount(n => n + 1); // 11
   React can sometimes batch state updates and then render the final state
 
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Effect Hook Without Cleanup
 
 ```javascript
@@ -781,9 +736,7 @@ const Debugger = (props) => {
   dependencies changes
 
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Effect Hook With Cleanup
 
 ```javascript
@@ -809,9 +762,7 @@ const Clock = () => {
   `clearInterval` stops the update when the component is unmounted
 
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Rule of Hooks
 
 ```javascript
@@ -833,9 +784,7 @@ const App = (props) => {
 
 - Only call hooks at the **top level**
 - This preserves the order of hooks so React knows what to return for each hook
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Data fetching
 
 <div style="font-size: 0.7em">
@@ -864,16 +813,13 @@ const IpAddress = () => {
 };
 ```
 
-Note:
-- Learn more about `fetch`
-  https://developer.mozilla.org/en-US/docs/Web/API/fetch
-- Learn more about `Promise`
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-
-</div>
-
-----
-
+<aside class="notes"><ul>
+<li>Learn more about <code>fetch</code>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/fetch">https://developer.mozilla.org/en-US/docs/Web/API/fetch</a></li>
+<li>Learn more about <code>Promise</code>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise</a></li>
+</ul>
+</div></aside></script></section><section data-markdown><script type="text/template">
 ### Exercise 3 - Rendering Data
 
 <div style="font-size: 0.7em">
@@ -891,12 +837,11 @@ Note:
 
 </div>
 
-Note:
-- Example Reddit Page
-  https://codepen.io/xamfoo/pen/OJQvaWr
-
----
-
+<aside class="notes"><ul>
+<li>Example Reddit Page
+<a href="https://codepen.io/xamfoo/pen/OJQvaWr">https://codepen.io/xamfoo/pen/OJQvaWr</a></li>
+</ul>
+</aside></script></section></section><section ><section data-markdown><script type="text/template">
 ## Events and Forms
 
 - Handling Events
@@ -904,9 +849,7 @@ Note:
 - `textarea` Tag
 - `select` Tag
 - Multiple Inputs
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Handling Events
 
 <div style="font-size: 0.8em">
@@ -931,9 +874,7 @@ const Toggle = () => {
   No need to `addEventListener` to a DOM element
 
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Controlled Components
 
 <div style="font-size: 0.8em">
@@ -968,9 +909,7 @@ const NameForm = (props) => {
   Defining the **value** of an input makes it a controlled component
 
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### `textarea` Tag
 
 ```javascript
@@ -984,9 +923,7 @@ const Essay = () => {
 
 - <!-- .element class="fragment" -->
  textarea uses a **value** attribute rather than children
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### `select` Tag
 
 <div style="font-size: 0.8em">
@@ -1012,9 +949,7 @@ const FlavorPicker = () => {
  `select` uses a **value** rather the option `selected` attribute
 
 </div>
-
-----
-
+</script></section><section data-markdown><script type="text/template">
 ### Multiple Inputs
 
 <div style="font-size: 0.8em">
@@ -1044,9 +979,7 @@ const WaitListForm = () => {
   with **`event.target.name`**
 
 </div>
-
----
-
+</script></section></section><section  data-markdown><script type="text/template">
 ## Build Your Own App
 
 - Time to let the creative juices flow!
@@ -1059,9 +992,7 @@ const WaitListForm = () => {
   - Build a simple game like Tic-tac-toe
     https://reactjs.org/tutorial/tutorial.html
 - Please share what you have built!
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Further Reading
 
 <div style="font-size: 0.8em">
@@ -1078,3 +1009,55 @@ const WaitListForm = () => {
   https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
 
 </div>
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
