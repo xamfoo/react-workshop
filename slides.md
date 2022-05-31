@@ -349,7 +349,7 @@ const element = (
 
 ### Why JSX?
 
-- React allows creation of components are units where markup and logic are
+- React allows creation of reusable components where markup and logic are
   defined together
 - Most people find it helpful as a visual aid when working with UI inside JS
 
