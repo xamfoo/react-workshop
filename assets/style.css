@@ -12,7 +12,11 @@
 }
 
 .reveal code {
-  font-family: "Iosevka Fixed Web", monospace;
+  font-family: "Iosevka Fixed Web", Courier, "Courier New", monospace;
+}
+
+html.print-pdf .reveal pre code {
+  font-family: "Iosevka Fixed Web", Courier, "Courier New", monospace!important;
 }
 
 .reveal strong {
