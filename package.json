@@ -5,9 +5,9 @@
   "description": "Materials for a React workshop",
   "main": "index.js",
   "scripts": {
-    "start": "reveal-md slides.md --watch --disable-auto-open --theme moon --highlight-theme github-dark --css assets/fonts/iosevka-fixed.css,assets/style.css",
+    "start": "reveal-md slides.md --watch --disable-auto-open --template reveal.html --theme moon --highlight-theme github-dark --css assets/fonts/iosevka-fixed.css,assets/style.css",
     "clean": "rimraf docs",
-    "build": "cross-env npm run clean && reveal-md slides.md --static docs --static-dirs assets --assets-dir . --absolute-url https://xamfoo.github.io/react-workshop --title 'React 18 for Beginners' --theme moon --highlight-theme github-dark --css assets/fonts/iosevka-fixed.css,assets/style.css"
+    "build": "cross-env npm run clean && reveal-md slides.md --featured-slide --static docs --static-dirs assets --assets-dir . --absolute-url https://xamfoo.github.io/react-workshop --template reveal.html --title 'React 18 for Beginners' --theme moon --highlight-theme github-dark --css assets/fonts/iosevka-fixed.css,assets/style.css"
   },
   "repository": {
     "type": "git",

@@ -11,6 +11,8 @@ Note:
 
 ## Introduction to React
 
+<div style="font-size: 0.9em">
+
 - What is React?
   - HTML
   - CSS
@@ -21,6 +23,8 @@ Note:
 - Toolchain
 - Editors for JS
 - Exercise 1 - Create a React project
+
+</div>
 
 ----
 
@@ -112,6 +116,8 @@ Note:
 
 #### What is React? - JavaScript (JS)
 
+<div style="font-size: 0.9em">
+
 **Scripting language used by browsers**
 
 ```javascript
@@ -129,6 +135,8 @@ const names = extract(people, 'name');
 - Web APIs: <!-- .element class="fragment" --> `document`, `window` etc.
 - Node.js APIs: <!-- .element class="fragment" --> `require` etc.
 - React exposes JS APIs <!-- .element class="fragment" -->
+
+</div>
 
 Note:
 - It is now a good time to have a quick revision on JS
@@ -179,6 +187,7 @@ Note: Declarative (what needs to be done, instead of how it should be done)
 
 ### Usage
 
+<div style="font-size: 0.8em">
 <div class="fragment">
 
 Install React in an existing Node.js project
@@ -202,10 +211,10 @@ or add React to an existing HTML page
 
 or try it in an online editor
 
-- codepen.io - React Hello World
-  https://codepen.io/xamfoo/pen/rNJGMma
+- codepen.io - React Hello World https://codepen.io/xamfoo/pen/rNJGMma
 - replit.com - React template
   https://replit.com/@replit/Reactjs
+</div>
 </div>
 
 ----
@@ -230,7 +239,7 @@ or try it in an online editor
 
 ### Exercise 1 - Create a React project
 
-<div style="font-size: 0.7em">
+<div class="exercise" style="font-size: 0.7em">
 
 1. Ensure node version >=16 is installed (use powershell in windows)
 ```shell
@@ -262,6 +271,8 @@ $ npm start
 - What are React Elements?
 - Rendering Elements
 - What is JSX?
+- JSX Props
+- JSX Children
 - Why JSX?
 
 ----
@@ -273,7 +284,7 @@ Smallest building blocks of React apps
 ```javascript
 const element = React.createElement(
   'h2',          // Component or HTML tag name
-  { id: 'tin' }, // Attributes
+  { id: 'tin' }, // Props
   'Tin'          // Children
 );
 ```
@@ -319,8 +330,6 @@ root.render(React.createElement('h2', null, 'Gallium'));
 
 ### What is JSX?
 
-<div class="fragment">
-
 JSX extends JS syntax to compile markup to React elements
 
 ```javascript
@@ -329,20 +338,53 @@ React.createElement('h1', { className: 'greeting' }, 'Hello World!');
 <h1 className="greeting">Hello World!</h1>
 ```
 
-</div>
-<div class="fragment">
+----
 
-JS expressions are valid inside markup when wrapped with curly braces
+### JSX Props
 
-```javascript
-const user = { name: 'Green', avatarUrl: '/img/user/green.png' };
-const element = (
-  <div>
-    <img src={user.avatarUrl} />
-    <span>Name: {user.name}</span>
-  </div>
-);
+```javascript [1|2|3|4|5|6|7|7-8|9|]
+<App className="container" /> // String literal
+<App count={3} /> // Number
+<App hidden={false || true} /> // Boolean
+<App hidden /> // Shorthand for true
+<App submit={data => doSomething(data)} /> // Function
+<App list={['A', 'B']} /> // Array
+<App style={{ fontSize: 16 }} /> // Object
+<App {...{ style: { fontSize: 16} }} /> // Spread object (same as previous)
+<App anything={Math.random() - 0.5} /> // JS expression
 ```
+
+- <!-- .element class="fragment" -->
+  Any JS expression is a valid prop when wrapped in curly braces **`{}`**
+- <!-- .element class="fragment" -->
+  Use **`{...props}`** to apply an object as props
+
+----
+
+### JSX Children
+
+```javascript [1|2|3|4|5|6|7|8|9|10-12|]
+<div>Hello</div> // String literal
+<div>{'Hello'}</div> // JS expression
+<div></div> // No children
+<div /> // No children (self-closing)
+<div>{null}</div> // Same as above
+<div>{undefined}</div> // Same as above
+<div>{false}</div> // Same as above
+<div>{true}</div> // Same as above
+<div>Hello: <span>{msg}</span></div> // String literal with JSX
+<Context.Consumer>
+  {(value) => <div>{value}</div>}
+<Context.Consumer> // Function as children
+```
+
+<div style="font-size: 0.8em">
+
+- <!-- .element class="fragment" -->
+  Any JS expression are valid children when wrapped in curly braces **`{}`**
+- <!-- .element class="fragment" -->
+  JSX children are passed to a component as **`props.children`**
+
 </div>
 
 ----
@@ -351,7 +393,7 @@ const element = (
 
 - React allows creation of reusable components where markup and logic are
   defined together
-- Most people find it helpful as a visual aid when working with UI inside JS
+- Most people find JSX helpful as a visual aid when working with UI inside JS
 
 ---
 
@@ -362,7 +404,7 @@ const element = (
 - Rendering Components
 - Composing Components
 - Styling Components
-- JS Modules and Components
+- JS Modules
 - Exercise 2 - Creating Components
 
 ----
@@ -420,7 +462,7 @@ class Welcome extends React.Component {
 
 ### Rendering Components
 
-<div style="font-size: 0.8em">
+<div style="font-size: 0.75em">
 
 User-defined components can be rendered by specifying it as a JSX tag name.
 
@@ -484,9 +526,9 @@ Then target them with CSS class selectors
 
 ----
 
-### JS Modules and Components
+### JS Modules
 
-<div style="font-size: 0.8em">
+<div style="font-size: 0.75em">
 
 Use **import** and **export** to access variables across files and packages
 when working with JS modules
@@ -510,7 +552,7 @@ import React, { useState } from 'react'; // import from package
 import './App.css'; // import CSS file works only if supported by bundler
 ```
 
-Ensure **`React`** is imported when using JSX in the file
+Ensure **`React`** is imported when using JSX in a file
 
 </div>
 
@@ -518,7 +560,7 @@ Ensure **`React`** is imported when using JSX in the file
 
 ### Exercise 2 - Creating Components
 
-<div style="font-size: 0.7em">
+<div style="font-size: 0.68em">
 
 1. Ensure your React app from the previous exercise is running. The page should
    reload automatically when code is saved.
@@ -551,6 +593,8 @@ $ npm start
 
 ### Lists
 
+<div style="font-size: 0.8em">
+
 ```javascript
 const users = [
   { id: 'A', name: 'Alice' },
@@ -578,7 +622,7 @@ const element = <Users users={users} />;
 ```text
 Warning: Each child in a list should have a unique 'key' prop.
 ```
-
+</div>
 </div>
 
 Note: Why does the warning exist?
@@ -586,6 +630,8 @@ Note: Why does the warning exist?
 ----
 
 ### Keys
+
+<div style="font-size: 0.8em">
 
 Add keys to help identify addition or removal of an item
 
@@ -608,10 +654,11 @@ const Users = (props) => (
   </ul>
 );
 ```
-
 </div>
 
 - Keys need only be unique among siblings <!-- .element class="fragment" -->
+
+</div>
 
 Note: Why is using a stable key better than an array index?
 
@@ -619,7 +666,7 @@ Note: Why is using a stable key better than an array index?
 
 ### Fragments
 
-Returning multiple elements without keys or nesting
+Returning multiple elements without nesting
 
 ```javascript [2-5|]
 const Stats = (props) => (
@@ -657,9 +704,8 @@ const Glossary = (props) => (
   </dl>
 );
 ```
-
-- Only <!-- .element class="fragment" --> **\<React.Fragment\>** supports the
-  key attribute
+- <!-- .element class="fragment" -->
+  Only  **\<React.Fragment\>** supports the key prop
 
 ---
 
@@ -690,7 +736,7 @@ const Glossary = (props) => (
 
 ### Introduction to Hooks - Component Lifetime
 
-<div style="font-size: 0.7em">
+<div style="font-size: 0.75em">
 
 ```javascript [1-2|2-3|3-4|4-5|5-6|6-7|]
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -754,22 +800,22 @@ testSetCount(n => n + 1); // 11
 
 ### Effect Hook Without Cleanup
 
+<div style="font-size: 0.7em">
+
 ```javascript
 const Debugger = (props) => {
   useEffect(() => 
     console.log('Component mounted');
-  , []); // [] means run after first render
+  , []); // Empty array means run after first render
   useEffect(() => {
     console.log('Component rendered');
   }); // No dependencies means run after every render
   useEffect(() => {
     console.log(`Message received: ${props.message}`);
-  }, [props.message]); // Run after printing a new message
+  }, [props.message]); // Run if message changes
   return <span>{props.message}</span>;
 };
 ```
-
-<div style="font-size: 0.7em">
 
 - <!-- .element class="fragment" -->
   Effect Hooks makes a component do something after it renders
@@ -805,7 +851,7 @@ const Clock = () => {
 <div style="font-size: 0.7em">
 
 - <!-- .element class="fragment" -->
-  To cleanup, return a function in `useEffect`
+  To cleanup, return a function in an effect Hook
 - <!-- .element class="fragment" -->
   `setInterval` updates the state every second (1000ms)
 - <!-- .element class="fragment" -->
@@ -817,7 +863,9 @@ const Clock = () => {
 
 ### Rule of Hooks
 
-```javascript
+<div style="font-size: 0.8em">
+
+```javascript [1-3|4-6|7-9|10-12]
 const App = (props) => {
   // Top Level - Call hooks here
   const [state, setState] = userState();
@@ -834,8 +882,12 @@ const App = (props) => {
 };
 ```
 
-- Only call hooks at the **top level**
-- This preserves the order of hooks so React knows what to return for each hook
+- <!-- .element class="fragment" -->
+  Only call hooks at the **top level**
+- <!-- .element class="fragment" -->
+  This preserves the order of hooks so React knows what to return for each hook
+
+</div>
 
 ----
 
@@ -843,7 +895,7 @@ const App = (props) => {
 
 <div style="font-size: 0.7em">
 
-```javascript
+```javascript [1-2|2-13||]
 const IpAddress = () => {
   const [request, setRequest] = useState({ isError: false });
   useEffect(() => {
@@ -939,7 +991,7 @@ const Toggle = () => {
 
 ### Controlled Components
 
-<div style="font-size: 0.8em">
+<div style="font-size: 0.7em">
 
 ```javascript
 const NameForm = (props) => {
@@ -986,7 +1038,7 @@ const Essay = () => {
 ```
 
 - <!-- .element class="fragment" -->
- textarea uses a **value** attribute rather than children
+ textarea uses a **value** prop rather than children
 
 ----
 
@@ -1012,7 +1064,7 @@ const FlavorPicker = () => {
 ```
 
 - <!-- .element class="fragment" -->
- `select` uses a **value** rather the option `selected` attribute
+ `select` uses a **value** prop rather than the `selected` prop
 
 </div>
 
@@ -1043,14 +1095,16 @@ const WaitListForm = () => {
 ```
 
 - <!-- .element class="fragment" -->
-  Add a **name** attribute to each input to help a handler differentiate them
-  with **`event.target.name`**
+  Add a **name** prop to each input to help a handler differentiate them with
+  **`event.target.name`**
 
 </div>
 
 ---
 
 ## Build Your Own App
+
+<div style="font-size: 0.9em">
 
 - Time to let the creative juices flow!
 - Build a React app with what you have learnt today
@@ -1062,6 +1116,8 @@ const WaitListForm = () => {
   - Build a simple game like Tic-tac-toe
     https://reactjs.org/tutorial/tutorial.html
 - Please share what you have built!
+
+</div>
 
 ---
 

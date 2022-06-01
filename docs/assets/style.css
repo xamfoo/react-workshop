@@ -6,8 +6,13 @@
   color: #ff7b72;
 }
 
+.reveal .exercise pre {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
 .reveal code {
-  font-family: 'Iosevka Fixed Web'
+  font-family: "Iosevka Fixed Web", monospace;
 }
 
 .reveal strong {
