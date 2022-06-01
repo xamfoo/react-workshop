@@ -335,7 +335,7 @@ React.createElement('h1', { className: 'greeting' }, 'Hello World!');
 JS expressions are valid inside markup when wrapped with curly braces
 
 ```javascript
-const user = { name: 'Green', avatarUrl: '/img/user/green.png'}
+const user = { name: 'Green', avatarUrl: '/img/user/green.png' };
 const element = (
   <div>
     <img src={user.avatarUrl} />
