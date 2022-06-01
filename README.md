@@ -2,7 +2,7 @@
 
 Materials for a React workshop
 
-## [Content](slides.md)
+## [Single Page](https://xamfoo.github.io/react-workshop/?print-pdf)
 
 ## [Presentation](https://xamfoo.github.io/react-workshop)
 
