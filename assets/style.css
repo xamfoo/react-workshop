@@ -6,6 +6,13 @@
   color: #ff7b72;
 }
 
+.reveal section > *:last-child,
+.reveal section > *:last-child > *:last-child,
+.reveal section > div:last-of-type > *:last-child,
+.reveal section > div:last-of-type > *:last-child > *:last-child {
+  margin-bottom: 0;
+}
+
 .reveal .exercise pre {
   margin: 0;
   margin-bottom: 0.5em;
